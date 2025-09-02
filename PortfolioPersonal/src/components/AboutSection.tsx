@@ -16,10 +16,11 @@ export const AboutSection: FC<AboutSectionProps> = ({
   avatarSrc = "/perfil.jpg",
   title = "Sobre mí",
   pitch = [
-    "Soy desarrollador Fullstack con foco en React, Node.js y TypeScript.",
-    "Disfruto construir interfaces limpias, rápidas y accesibles, sin descuidar la arquitectura del backend.",
-    "Me mueven la performance, la DX y el detalle visual.",
-    "Busco aportar impacto real, escribiendo código mantenible y bien testeado.",
+    "Me llamo Martín Ignacio De Oro, aunque la mayoría me dice Tincho. Empecé en el mundo de la programación en 2019.",
+    "Actualmente estoy cursando la Tecnicatura Universitaria en Desarrollo Web en la UNLaM, donde sigo fortaleciendo mis bases y explorando nuevas tecnologías.",
+    "Soy desarrollador Fullstack, aunque siento una gran pasión por el frontend, ya que me encanta diseñar y construir interfaces modernas, dinámicas y con buena experiencia de usuario.",
+    "Disfruto del proceso creativo de transformar una idea en algo visual, accesible y bien implementado, sin descuidar la solidez del backend y las buenas prácticas de desarrollo.",
+    "Mi objetivo es seguir creciendo como profesional, aportando valor a los proyectos en los que participo y combinando creatividad con ingeniería para construir productos que realmente marquen la diferencia."
   ],
   highlights = ["Fullstack", "React • Node.js • TS", "Orientado a performance", "UX/UI lover"],
   email = "mailto:deoromartinignacio@gmail.com",

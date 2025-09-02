@@ -17,8 +17,8 @@ const experiences: Experience[] = [
     company: "Desarrollos Web",
     period: "2023 — Presente",
     highlights: [
-      "Emprendimiento propio para diseño y desarrollo de sitios y apps web con React, TypeScript y Tailwind.",
-      "Enfoque en performance, UX y SEO básico; integración de APIs y despliegue en Vercel/Netlify.",
+      "Emprendimiento propio para diseño y desarrollo de sitios web y aplicaciones móviles.",
+      "Enfoque en performance, UX y SEO profesional; integración de APIs y despliegue.",
     ],
     current: true,
   },

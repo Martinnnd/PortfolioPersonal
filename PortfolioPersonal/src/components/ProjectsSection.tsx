@@ -1,6 +1,6 @@
 // src/components/ProjectsSection.tsx
 import type { FC } from "react";
-import { Code2, ExternalLink, Code } from "lucide-react";
+import { Code2, ExternalLink, Code, Github } from "lucide-react";
 import { useInViewOnce } from "../hooks/useInViewOnce"; // 👈 agregado
 
 type Project = {
@@ -26,7 +26,7 @@ export const ProjectsSection: FC = () => {
             summary:
                 "Plataforma para publicar y adoptar mascotas. Listado con filtros, vistas de detalle y flujo de adopción. Backend en Java con Spring y persistencia.",
             image: "/petsPage.jpg",
-            tech: ["Java", "Spring Boot", "Thymeleaf", "Hibernate"],
+            tech: ["Java", "Spring Boot", "Thymeleaf", "Hibernate", "Docker"],
         },
         {
             title: "Desarrollos Web — Landing de Servicios",
@@ -57,7 +57,6 @@ export const ProjectsSection: FC = () => {
 
                 <div className="space-y-8">
                     {projects.map((p, i) => {
-                        // 👇 animación: alterna izquierda/derecha y corre una sola vez
                         const fromLeft = i % 2 === 0;
                         const { ref, inView } = useInViewOnce<HTMLDivElement>();
                         const hidden = fromLeft ? "-translate-x-10 opacity-0" : "translate-x-10 opacity-0";
@@ -68,7 +67,7 @@ export const ProjectsSection: FC = () => {
                                 key={i}
                                 ref={ref}
                                 className={`grid items-stretch gap-6 lg:grid-cols-2 rounded-2xl ring-1 ring-white/10 bg-white/[0.03] backdrop-blur overflow-hidden will-change-transform motion-reduce:transition-none motion-reduce:transform-none transition duration-700 ease-[cubic-bezier(.22,1,.36,1)] ${inView ? shown : hidden}`}
-                                style={{ transitionDelay: `${i * 80}ms` }} // stagger sutil
+                                style={{ transitionDelay: `${i * 80}ms` }}
                             >
                                 <a
                                     href={p.demoUrl || p.codeUrl || "#"}
@@ -126,6 +125,19 @@ export const ProjectsSection: FC = () => {
                             </article>
                         );
                     })}
+                </div>
+
+                {/* 👇 Botón para ver más proyectos en GitHub */}
+                <div className="mt-12 flex justify-center">
+                    <a
+                        href="https://github.com/Martinnnd?tab=repositories"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/15 px-6 py-3 text-base font-medium text-slate-100 ring-1 ring-white/20 transition"
+                    >
+                        <Github className="h-5 w-5" />
+                        Ver más proyectos en GitHub
+                    </a>
                 </div>
             </div>
         </section>

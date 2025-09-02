@@ -93,7 +93,17 @@ export const HeroFeatureBoard: FC<HeroFeatureBoardProps> = ({
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             {ctaPrimary && (
               <a
-                href={ctaPrimary.href}
+                href={encodeURI(ctaPrimary.href)}
+                // Si apunta a un PDF, habilita descarga directa
+                download={
+                  ctaPrimary.href.toLowerCase().endsWith(".pdf") ? "" : undefined
+                }
+                target={
+                  /^https?:\/\//.test(ctaPrimary.href) ? "_blank" : undefined
+                }
+                rel={
+                  /^https?:\/\//.test(ctaPrimary.href) ? "noreferrer" : undefined
+                }
                 className="
                   rounded-xl px-5 py-2.5 text-sm font-medium
                   bg-white/10 hover:bg-white/15
@@ -107,6 +117,12 @@ export const HeroFeatureBoard: FC<HeroFeatureBoardProps> = ({
             {ctaSecondary && (
               <a
                 href={ctaSecondary.href}
+                target={
+                  /^https?:\/\//.test(ctaSecondary.href) ? "_blank" : undefined
+                }
+                rel={
+                  /^https?:\/\//.test(ctaSecondary.href) ? "noreferrer" : undefined
+                }
                 className="
                   rounded-xl px-5 py-2.5 text-sm font-medium
                   bg-transparent hover:bg-white/5
@@ -124,11 +140,14 @@ export const HeroFeatureBoard: FC<HeroFeatureBoardProps> = ({
                     s.type === "github" ? Github : s.type === "linkedin" ? Linkedin : Mail;
                   const label =
                     s.type === "github" ? "GitHub" : s.type === "linkedin" ? "LinkedIn" : "Email";
+                  const isExternal = s.type !== "mail"; // mail usa mailto:
                   return (
                     <a
                       key={i}
                       href={s.href}
                       aria-label={label}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
                       className="rounded-lg p-2 text-white/70 hover:text-white hover:bg-white/5 ring-1 ring-white/10 transition"
                     >
                       <Icon className="w-5 h-5" />

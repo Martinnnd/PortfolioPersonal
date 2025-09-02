@@ -22,9 +22,14 @@ export const AboutSection: FC<AboutSectionProps> = ({
     "Busco aportar impacto real, escribiendo código mantenible y bien testeado.",
   ],
   highlights = ["Fullstack", "React • Node.js • TS", "Orientado a performance", "UX/UI lover"],
-  email = "mailto:tuemail@dominio.com",
-  cvHref = "/cv.pdf",
+  email = "mailto:deoromartinignacio@gmail.com",
+  cvHref = "/cv/Cv MartindeOroES.pdf",
 }) => {
+  // Normalizamos el link del CV para manejar espacios y forzamos descarga si es PDF
+  const cvHrefEncoded = encodeURI(cvHref);
+  const isPdf = /\.pdf(\?.*)?$/i.test(cvHref.trim());
+  const isExternal = /^https?:\/\//i.test(cvHref);
+
   return (
     <section
       id={id}
@@ -80,8 +85,13 @@ export const AboutSection: FC<AboutSectionProps> = ({
                 Contacto
               </a>
               <a
-                href={cvHref}
+                href={cvHrefEncoded}
+                download={isPdf ? "Cv MartindeOroES.pdf" : undefined}
+                type={isPdf ? "application/pdf" : undefined}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noreferrer" : undefined}
                 className="inline-flex items-center gap-2 rounded-xl bg-transparent hover:bg-white/5 px-4 py-2 text-sm text-white/80 ring-1 ring-white/15 transition"
+                title="Descargar CV"
               >
                 <Download className="h-4 w-4" />
                 Descargar CV

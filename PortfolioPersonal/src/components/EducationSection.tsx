@@ -22,7 +22,7 @@ const academics: Academic[] = [
     period: "Marzo 2023 — Actualidad",
     description: "Carrera orientada al desarrollo web fullstack.",
     highlights: [
-      "Lenguajes y tecnologías vistas: HTML, CSS, JavaScript, Java, PHP, SQL.",
+      "Lenguajes y tecnologías vistas: HTML, CSS, JavaScript, Angular, Java, PHP, SQL, .NET, C#.",
       "Enfoque en programación, bases de datos, y prácticas de desarrollo profesional.",
     ],
   },

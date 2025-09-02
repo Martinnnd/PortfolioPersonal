@@ -12,25 +12,24 @@ function App() {
   return (
     <>
       <div className="min-h-screen bg-black">
-      <HeroFeatureBoard
-        name="Martín Ignacio De Oro"
-        role="Fullstack Developer — React, Node.js & TypeScript"
-        tagline="Construyo interfaces limpias, rápidas y mantenibles. Enfocado en experiencia del usuario, performance y calidad del código."
-        ctaPrimary={{ label: "Ver proyectos", href: "#proyectos" }}
-        ctaSecondary={{ label: "Descargar CV", href: "/cv.pdf" }}
-        socials={[
-          { type: "github", href: "https://github.com/tuusuario" },
-          { type: "linkedin", href: "https://linkedin.com/in/tuusuario" },
-          { type: "mail", href: "mailto:tuemail@dominio.com" },
-        ]}
-      />
-      <ProjectsSection />
-      <SkillsSection />
-      <AboutSection />
-      <ExperienceSection />
-      <EducationSection />
-      {/* Acá seguirían tus secciones en scroll: Proyectos, Experiencia, Skills, Contacto... */}
-    </div>
+        <HeroFeatureBoard
+          name="Martín Ignacio De Oro"
+          role="Fullstack Developer — React, Node.js & TypeScript"
+          tagline="Construyo interfaces limpias, rápidas y mantenibles. Enfocado en experiencia del usuario, performance y calidad del código."
+          ctaPrimary={{ label: "Descargar CV", href: "/cv/Cv MartindeOroES.pdf" }} 
+          ctaSecondary={{ label: "Ver proyectos", href: "#proyectos" }}
+          socials={[
+            { type: "github", href: "https://github.com/Martinnnd" },
+            { type: "linkedin", href: "https://www.linkedin.com/in/martindeoro/" },
+            { type: "mail", href: "mailto:deoromartinignacio@gmail.com" },
+          ]}
+        />
+        <ProjectsSection />
+        <SkillsSection />
+        <AboutSection />
+        <ExperienceSection />
+        <EducationSection />
+      </div>
     </>
   )
 }

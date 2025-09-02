@@ -1,3 +1,4 @@
+// src/components/EducationSection.tsx
 import type { FC } from "react";
 import { GraduationCap, BookOpen } from "lucide-react";
 import { useInViewOnce } from "../hooks/useInViewOnce";
@@ -12,6 +13,7 @@ type Academic = {
 
 type Course = {
   name: string;
+  icon?: string; // 👈 agregamos icono
   provider?: string;
 };
 
@@ -29,11 +31,11 @@ const academics: Academic[] = [
 ];
 
 const courses: Course[] = [
-  { name: "React & TypeScript" },
-  { name: "JavaScript Avanzado" },
-  { name: "HTML5 y CSS3" },
-  { name: "Python Essentials" },
-  { name: "AWS Cloud Fundamentals" },
+  { name: "React & TypeScript", icon: "devicon-react-original colored" },
+  { name: "JavaScript Avanzado", icon: "devicon-javascript-plain colored" },
+  { name: "HTML5 y CSS3", icon: "devicon-html5-plain colored" },
+  { name: "Python Essentials", icon: "devicon-python-plain colored" },
+  { name: "AWS Cloud Fundamentals", icon: "devicon-amazonwebservices-plain colored" },
 ];
 
 export const EducationSection: FC<{ id?: string }> = ({ id = "formacion" }) => {
@@ -96,13 +98,14 @@ export const EducationSection: FC<{ id?: string }> = ({ id = "formacion" }) => {
                   key={idx}
                   ref={ref}
                   className={`
-                    rounded-xl bg-white/[0.04] ring-1 ring-white/10 px-4 py-3 text-sm text-white/80
+                    flex items-center gap-2 rounded-xl bg-white/[0.04] ring-1 ring-white/10 px-4 py-3 text-sm text-white/80
                     transition duration-500 ease-out
                     ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
                   `}
                   style={{ transitionDelay: `${idx * 60}ms` }}
                 >
-                  {c.name}
+                  {c.icon && <i className={`${c.icon} text-xl`} />} {/* 👈 logo */}
+                  <span>{c.name}</span>
                   {c.provider && <span className="text-white/50"> — {c.provider}</span>}
                 </li>
               );

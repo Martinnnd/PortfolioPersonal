@@ -34,7 +34,7 @@ export const ProjectsSection: FC = () => {
       title: "Desarrollos Web — Landing de Servicios",
       summary:
         "Landing corporativa en React/TS para ofrecer servicios web. Hero con CTA, secciones de servicios y contacto, optimizada para performance y SEO básico.",
-      image: "/DWPage.jpg",
+      image: "/desarrollosWebPag.jpg",
       tech: ["React", "TypeScript", "Tailwind"],
       demoUrl: "https://desarrollosweb.net.ar/",
     },
@@ -50,7 +50,7 @@ export const ProjectsSection: FC = () => {
       title: "Rasnik Cakes — Pastelería",
       summary:
         "Sitio institucional y catálogo para pastelería artesanal. Gestión de contenido y pedidos desde el panel, con foco en SEO local.",
-      image: "/rasnikPage.jpg",
+      image: "/rasnikCakesPag.jpg",
       tech: ["WordPress", "PHP", "WooCommerce"],
       demoUrl: "https://rasnikcakes.com.ar/catalogo.php",
     },
@@ -58,8 +58,8 @@ export const ProjectsSection: FC = () => {
       title: "Pixelar — Agencia / Portfolio",
       summary:
         "Landing/portfolio para estudio de desarrollo y diseño. Animaciones sutiles, secciones de servicios, trabajos y contacto.",
-      image: "/pixelarPage.jpg",
-      tech: ["Next.js", "TypeScript", "Tailwind"],
+      image: "/pixelarPag.jpg",
+      tech: ["WordPress", "PHP", "Webflow"],
       demoUrl: "https://pixelar-two.vercel.app/",
     },
   ];

@@ -15,7 +15,7 @@ const experiences: Experience[] = [
   {
     role: "Fullstack / Frontend Developer",
     company: "Desarrollos Web",
-    period: "2023 — Presente",
+    period: "2022 — Presente",
     highlights: [
       "Emprendimiento propio para diseño y desarrollo de sitios web y aplicaciones móviles.",
       "Enfoque en performance, UX y SEO profesional; integración de APIs y despliegue.",
@@ -25,7 +25,7 @@ const experiences: Experience[] = [
   {
     role: "Frontend Developer",
     company: "Sirius Software",
-    period: "Oct 2024 — Jun 2025",
+    period: "2023 — Presente",
     highlights: [
       "Implementación de interfaces responsivas y componentes reutilizables en React/TS.",
       "Mejora del flujo de desarrollo con prácticas de versionado, revisiones y small PRs.",
